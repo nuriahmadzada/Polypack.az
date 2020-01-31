@@ -1,0 +1,58 @@
+﻿@model Polypack.Models.WeProvide
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Manage/Views/Shared/_Layout1.cshtml";
+}
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8 mb-4">
+        <div class="container-fluid">
+            <div class="header-body">
+                <!-- Card stats -->
+                <div class="row">
+                    <div class="col-xl-12 order-xl-1">
+                        <div class="card bg-secondary shadow">
+                            <div class="card-header bg-white border-0">
+                                <div class="row align-items-center">
+                                    <div class="col-8">
+                                        <h3 class="mb-0">Temin Edirik bölməsi</h3>
+                                    </div>
+                                    <div class="col-4 text-right">
+                                        <a href="@Url.Action("index","weprovides", new { Area="manage" })" class="btn btn-sm btn-primary toback"><i class="ni ni-bold-left"></i>Geri Qayıt</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <dl class="dl-horizontal">
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.TextSection)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.Raw(Model.TextSection)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.Photo)
+                                        </dt>
+
+                                        <dd>
+                                            <img src="~/Uploads/@Model.Photo" width="300" />
+                                        </dd>
+
+                                    </dl>
+                                </div>
+                                <p>
+                                    <a href="@Url.Action("edit",new { id = Model.Id })" class="btn btn-sm btn-info">Redaktə Et</a>
+                                    @Html.ActionLink("Geriyə qayıt", "Index")
+                                </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

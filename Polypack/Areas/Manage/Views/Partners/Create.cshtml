@@ -1,0 +1,56 @@
+﻿@model Polypack.Models.Partner
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="header bg-gradient-primary pb-8 pt-5 pt-md-8 mb-4">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row">
+                <div class="col-xl-12 order-xl-1">
+                    <div class="card bg-secondary shadow">
+                        <div class="card-header bg-white border-0">
+                            <div class="row align-items-center">
+                                <div class="col-6">
+                                    <h3 class="mb-0">Tərəfdaşlarımız bölməsi</h3>
+                                </div>
+                                <div class="col-6 d-flex justify-content-end">
+                                    <div class="col-3">
+                                        <a href="@Url.Action("index","partners", new { Area="Manage" })" class="btn btn-sm btn-primary toback"><i class="ni ni-bold-left"></i>Geri Qayıt</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form method="post" action="@Url.Action("create","partners", new {Area="manage" })" enctype="multipart/form-data">
+                                @Html.AntiForgeryToken()
+
+                                <div class="form-horizontal">
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    
+                                    <div class="form-group">
+                                        <label for="#">Şəkil</label>
+                                        <div class="col-md-10">
+                                            <input type="file" name="Picture" class="form-control" required />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" value="Yadda Saxla" class="btn btn-default" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div>
+                                @Html.ActionLink("Geriyə qayıt", "Index")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

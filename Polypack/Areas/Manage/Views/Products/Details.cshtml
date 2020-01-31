@@ -1,0 +1,78 @@
+﻿@model Polypack.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8 mb-4">
+        <div class="container-fluid">
+            <div class="header-body">
+                <div class="row">
+                    <div class="col-xl-12 order-xl-1">
+                        <div class="card bg-secondary shadow">
+                            <div class="card-header bg-white border-0">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <h3 class="mb-0">Məhsul haqqında ətraflı məlumat</h3>
+                                    </div>
+                                    <div class="col-6 d-flex justify-content-end">
+                                        <div class="col-3">
+                                            <a href="@Url.Action("create","products", new { Area = "Manage"})" class="btn btn-sm btn-success"><i class="ni ni-fat-add"></i>Yenisini Yarat</a>
+                                        </div>
+                                        <div class="col-3">
+                                            <a href="@Url.Action("index","products", new { Area="Manage" })" class="btn btn-sm btn-primary toback"><i class="ni ni-bold-left"></i>Geri Qayıt</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <hr />
+                                    <dl class="dl-horizontal">
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.Category.Name)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.CategoryId)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.Name)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.Name)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.Desc)
+                                        </dt>
+
+                                        <dd>
+                                            @Html.DisplayFor(model => model.Desc)
+                                        </dd>
+
+                                        <dt>
+                                            @Html.DisplayNameFor(model => model.Photo)
+                                        </dt>
+
+                                        <dd>
+                                            <img src="~/Uploads/@Model.Photo" height="300" />
+                                        </dd>
+
+                                    </dl>
+                                </div>
+                                <p>
+                                    <a href="@Url.Action("edit",new { id = @Model.Id })" class="btn btn-sm btn-info">Redaktə Et</a>
+                                    @Html.ActionLink("Geriyə qayıt", "Index")
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+

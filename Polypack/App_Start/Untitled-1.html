@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").text($("form"));
+  });
+});
+</script>
+</head>
+<body>
+
+<form action="">
+    <input type="text" value="Mickey"><br>
+    <input type="text" value="Mouse"><br>
+</form>
+
+<button>Serialize form values</button>
+
+<div></div>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BPİ</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="~/Assets/css/master.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Assets/css/style.css">
+    <link rel="stylesheet" href="~/Assets/plugins/iview/css/iview.css" type='text/css' media='all' />
+    <link rel="stylesheet" href="~/Assets/plugins/iview/css/skin/style2.css" type='text/css' media='all' />
+    <script type="text/javascript" src="~/Assets/js/jquery-1.11.1.min.js"></script>
+    <script src="~/Assets/js/jquery-migrate-1.2.1.js"></script>
+    <script src="~/Assets/js/jquery-ui.min.js"></script>
+    <script src="~/Assets/js/bootstrap-3.1.1.min.js"></script>
+    <script src="~/Assets/js/modernizr.custom.js"></script>
+    <script src="https://kit.fontawesome.com/49b310bf46.js"></script>
+</head>
+
+<body class="animated-css">
+
+    <!-- Loader Landing Page -->
+    <div id="ip-container" class="ip-container">
+        <!-- initial header -->
+        <header class="ip-header">
+            <div class="ip-loader">
+                <div class="text-center">
+                    <div class="ip-logo">
+                        <div class="logo">
+                            <h1><a href="@Url.Action("index", "home")" style="color: #2e375f">BPİ</a></h1>
+                        </div>
+                    </div>
+                </div>
+                <svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
+                    <path class="ip-loader-circlebg"
+                          d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,39.3,10z" />
+                    <path id="ip-loader-circle" class="ip-loader-circle"
+                          d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z" />
+                </svg>
+            </div>
+        </header>
+    </div>
+    <!-- Loader end -->
+
+
+    <div class="switcher-wrapper">
+        <!-- SWITCHER -->
+
+        <link rel="stylesheet" id="switcher-css" type="text/css" href="~/Assets/plugins/switcher/css/switcher.css" media="all" />
+
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="~/Assets/css/animate.min.css">
+
+        <link rel="alternate stylesheet" type="text/css" href="~/Assets/plugins/switcher/css/color0.css" title="color0"
+              media="all" />
+        <link rel="alternate stylesheet" type="text/css" href="~/Assets/plugins/switcher/css/color1.css" title="color1"
+              media="all" />
+        <link rel="alternate stylesheet" type="text/css" href="~/Assets/plugins/switcher/css/color2.css" title="color2"
+              media="all" />
+        <link rel="alternate stylesheet" type="text/css" href="~/Assets/plugins/switcher/css/color3.css" title="color3"
+              media="all" />
+
+
+        <script src="~/Assets/plugins/switcher/js/bootstrap-select.js"></script>
+        <script src="~/Assets/plugins/switcher/js/evol.colorpicker.min.js" type="text/javascript"></script>
+        <script src="~/Assets/plugins/switcher/js/dmss.js"></script>
+
+
+    </div>
+
+    <div id="home"></div>
+    <header id="header">
+        <div class="fixtop">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-xl-3 col-4">
+                        <div class="logo">
+                            <h1><a href="@Url.Action("index", "home")">BPİ</a></h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-xl-9 col-8">
+                        <div class="mainmenu">
+                            <nav id="nav-menu" class="navbar navbar-expand-lg navbar-light bg-light">
+                                <button class="ml-auto navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="white-color"> <i class="fa fa-bars"></i></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item current">
+                                            <a class="nav-link scroll-animite" href="#home">Ana Səhifə</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link scroll-animite" href="#about">Haqqımızda</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link scroll-animite to-back " href="#products">Məhsullarımız</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link scroll-animite" href="#services">Xidmətlərimiz</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link scroll-animite" href="#brand">Tərəfdaşlarımız</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link scroll-animite" href="#contact">Bizimlə Əlaqə</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- Header area end -->
+
+
+    @RenderBody()
+
+    <!--HOME SLIDER-->
+    <script src="~/Assets/plugins/iview/js/iview.js"></script>
+
+    <!-- SCRIPTS -->
+
+    <script src="~/Assets/js/waypoints.min.js"></script>
+    <script src="~/Assets/plugins/bxslider/jquery.bxslider.min.js"></script>
+    <script src="~/Assets/plugins/magnific/jquery.magnific-popup.js"></script>
+    <script src="~/Assets/plugins/prettyphoto/js/jquery.prettyPhoto.js"></script>
+
+    <!-- Loader -->
+    <script src="~/Assets/plugins/loader/js/classie.js"></script>
+    <script src="~/Assets/plugins/loader/js/pathLoader.js"></script>
+    <script src="~/Assets/plugins/loader/js/main.js"></script>
+
+    <!--THEME-->
+    <script src="~/Assets/js/cssua.min.js"></script>
+    <script src="~/Assets/js/custom.js"></script>
+
+    <!-- particles js -->
+    <script src="~/Assets/js/particles.min.js"></script>
+    <script src="~/Assets/js/app.js"></script>
+    <script src="~/Assets/js/jquery.nav.js"></script>
+
+    <script src="~/Assets/myscript.js"></script>
+    <script src="~/Assets/plugins/rendro-easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <a class="scroll-top">
+        <i class="fa fa-long-arrow-up"></i>
+    </a>
+
+</body>
+</html>

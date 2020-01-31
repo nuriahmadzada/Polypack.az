@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Polypack.Models.Header>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="header bg-gradient-primary pb-8 pt-5 pt-md-8 mb-4">
+    <div class="container-fluid">
+        <div class="header-body">
+            <!-- Card stats -->
+            <div class="row">
+                <div class="col-xl-12 order-xl-1">
+                    <div class="card bg-secondary shadow">
+                        <div class="card-header bg-white border-0">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h3 class="mb-0">Saytın üz qapağı</h3>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <a href="@Url.Action("index","dashboard", new { Area="Manage" })" class="btn btn-sm btn-primary toback"><i class="ni ni-bold-left"></i>Geri Qayıt</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+
+
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Title)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Subtitle)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Photo)
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Title)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Subtitle)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Photo)
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("edit",new { id = item.Id })" class="btn btn-sm btn-info">Redaktə Et</a>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

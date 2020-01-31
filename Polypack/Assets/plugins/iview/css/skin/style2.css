@@ -1,0 +1,214 @@
+
+@media (min-width:1200px) {
+.slider-header .header {
+	position: relative;
+	z-index: 77;
+	margin: 0 0 30px 0;
+}
+.slider-header .navbar-header {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	position: relative;
+	z-index: 78;
+	color: #fff;
+}
+.slider-header .navbar-header * {
+	color: #fff;
+}
+.slider-header .yamm .nav > li > a {
+	color: #fff;
+}
+.slider-header .header .top-cart {
+	display: none !important;
+}
+.slider-header .yamm .dropdown-menu {
+	background-color: rgba(255, 255, 255, 0.7);
+}
+.slider-header .iview-caption {
+	padding: 45px !important;
+}
+.slider-header #iview {
+ display: inline-block;
+    margin-top: -160px;
+    position: relative;
+    width: 100%;
+}
+}
+#iview h1 {
+	font-size: 54px;
+}
+#iview h2 {
+	font-size: 50px;
+}
+#iview h3 {
+	font-size: 44px;
+}
+#iview h4 {
+	font-size: 40px;
+}
+#iview h5 {
+	font-size: 34px;
+}
+#iview h6 {
+	font-size: 30px;
+}
+#iview {
+	display: block;
+	background: none repeat scroll 0 0 #f5f5f5;
+	position: relative;
+	margin: 0px auto;
+	overflow: hidden;
+}
+#iview .iviewSlider {
+	display: block;
+	height: 744px;
+	max-height: 744px;
+	width: 1920px;
+	overflow: hidden;
+}
+.iview-caption.text-center * {
+	color: #fff;
+	margin: 0;
+	text-align: left !important;
+}
+#iview div.iview-directionNav {
+	bottom: 60px;
+	position: absolute;
+	right: 0;
+	width: 140px;
+	z-index: 9;
+}
+#iview div.iview-directionNav a:hover {
+	opacity: 0.9;
+}
+.iview-prevNav {
+	background: none repeat scroll 0 0 #d74516 !important;
+	left: 0;
+}
+#iview div.iview-directionNav a {
+	background: none repeat scroll 0 0 #2e375f;
+	cursor: pointer;
+	display: block;
+	height: 50px;
+	position: absolute;
+	transition-delay: 0s;
+	transition-duration: 0.3s;
+	transition-property: left, right;
+	transition-timing-function: ease-in-out;
+	width: 50px;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+	transform: rotate(0deg) scale(1.003) skew(-14deg) translate(0px);
+	-webkit-transform: rotate(360deg) scale(1.003) skew(-14deg) translate(0px);
+	-moz-transform: rotate(0deg) scale(1.003) skew(-14deg) translate(0px);
+	-o-transform: rotate(0deg) scale(1.003) skew(-14deg) translate(0px);
+	-ms-transform: rotate(0deg) scale(1.003) skew(-14deg) translate(0px);
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+#iview div.iview-directionNav a.iview-prevNav:after {
+	content: "\f104";
+	color: #fff;
+	display: inline-block;
+	font-family: "FontAwesome";
+	font-size: 30px !important;
+	height: 30px;
+	left: 20px !important;
+	position: relative;
+	top: 0 !important;
+	width: 30px;
+	transform: rotate(0deg) scale(1.003) skew(11deg) translate(0px);
+	-webkit-transform: rotate(360deg) scale(1.003) skew(14deg) translate(0px);
+	-moz-transform: rotate(0deg) scale(1.003) skew(11deg) translate(0px);
+	-o-transform: rotate(0deg) scale(1.003) skew(11deg) translate(0px);
+	-ms-transform: rotate(0deg) scale(1.003) skew(11deg) translate(0px);
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+#iview div.iview-directionNav a.iview-nextNav:after {
+	content: "\f105";
+	position: absolute;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	color: #fff;
+	font-family: "FontAwesome";
+	font-size: 30px !important;
+	left: 20px !important;
+	position: relative;
+	top: 0 !important;
+	transform: rotate(0deg) scale(1.003) skew(11deg) translate(0px);
+	-webkit-transform: rotate(360deg) scale(1.003) skew(14deg) translate(0px);
+	-moz-transform: rotate(0deg) scale(1.003) skew(11deg) translate(0px);
+	-o-transform: rotate(0deg) scale(1.003) skew(11deg) translate(0px);
+	-ms-transform: rotate(0deg) scale(1.003) skew(11deg) translate(0px);
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	-ms-transition: all .3s ease-out;
+	-o-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+#iview div.iview-directionNav a.iview-nextNav {
+	right: -27px;
+	background-position: 27px 0px;
+}
+#iview div.iview-directionNav a.iview-prevNav {
+	left: -27px;
+	background-position: 0px 0px
+}
+#iview.iview-hover div.iview-directionNav a.iview-nextNav {
+	right: 20px;
+}
+#iview.iview-hover div.iview-directionNav a.iview-prevNav {
+	left: 20px;
+}
+.bg-no-caption {
+	background: none !important;
+}
+.iview-caption {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+	color: #FFF;
+	border-radius: 0px;
+	padding: 10px 15px !important;
+	font-size: 15px;
+	line-height: 20px !important;
+	height: auto !important;
+	min-height: 190px !important;
+	display: inline-block;
+	width: auto !important;
+	padding: 20px 20px 20px 20px !important;
+}
+.iview-caption.caption1 {
+	text-shadow: none;
+}
+.iview-caption.caption2 {
+	background: #FFF;
+	color: #000;
+	text-shadow: none;
+}
+.iview-caption.caption3 {
+	background: #c4302b;
+	box-shadow: rgba(0, 0, 0, 0.7) 10px 10px 15px 0px;
+	text-shadow: none;
+}
+#iview-preloader {
+	border: 1px solid #ddd;
+	width: 150px;
+}
+#iview-preloader div {
+	background: #ddd;
+}
+#iview-timer {
+	border-radius: 10px;
+}
+#iview-timer div {
+	border-radius: 10px;
+}

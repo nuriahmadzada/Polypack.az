@@ -1,0 +1,75 @@
+﻿@model Polypack.Models.SubCategory
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="header bg-gradient-primary pb-8 pt-5 pt-md-8 mb-4">
+    <div class="container-fluid">
+        <div class="header-body">
+            <!-- Card stats -->
+            <div class="row">
+                <div class="col-xl-12 order-xl-1">
+                    <div class="card bg-secondary shadow">
+                        <div class="card-header bg-white border-0">
+                            <div class="row align-items-center">
+                                <div class="col-8">
+                                    <h3 class="mb-0">Alt Kateqoriya Yarat</h3>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <a href="@Url.Action("index","subcategory", new { Area="manage" })" class="btn btn-sm btn-primary toback"><i class="ni ni-bold-left"></i>Geri Qayıt</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+
+                            <div class="pl-lg-4">
+
+                                <form method="post" action="@Url.Action("create","subcategory", new {Area="manage" })" enctype="multipart/form-data">
+                                    @Html.AntiForgeryToken()
+
+                                    <div class="form-horizontal">
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                        <div class="form-group">
+                                            <label for="#">Alt Kateqoriya Adı</label>
+                                            <div class="col-md-10">
+                                                <input type="text" name="Name" class="form-control" required />
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="#">Üst Kateqoriya</label>
+                                            <div class="col-md-10">
+                                                <select class="form-control" name="CategoryId" required>
+                                                    <option value="">--Seçin</option>
+                                                    @foreach (var category in ViewBag.CategoryId)
+                                                    {
+                                                        <option value="@category.Id">@category.Name</option>
+                                                    }
+                                                </select>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="#">Şəkil</label>
+                                            <div class="col-md-10">
+                                                <input type="file" name="Picture" class="form-control" required />
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-md-offset-2 col-md-10">
+                                                <input type="submit" value="Yadda Saxla" class="btn btn-default" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

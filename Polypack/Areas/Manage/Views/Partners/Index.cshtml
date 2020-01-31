@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Polypack.Models.Partner>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8 mb-4">
+        <div class="container-fluid">
+            <div class="header-body">
+                <div class="row">
+                    <div class="col-xl-12 order-xl-1">
+                        <div class="card bg-secondary shadow">
+                            <div class="card-header bg-white border-0">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <h3 class="mb-0">Tərəfdaşlarımız bölməsi</h3>
+                                    </div>
+                                    <div class="col-6 d-flex justify-content-end">
+                                        <div class="col-3">
+                                            <a href="@Url.Action("create","partners", new { Area="Manage" })" class="btn btn-sm btn-success toback"><i class="ni ni-fat-add"></i>Yenisini Yarat</a>
+                                        </div>
+                                        <div class="col-3">
+                                            <a href="@Url.Action("index","dashboard", new { Area="Manage" })" class="btn btn-sm btn-primary toback"><i class="ni ni-bold-left"></i>Geri Qayıt</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table class="table">
+                                    <tr>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Photo)
+                                        </th>
+                                        <th></th>
+                                    </tr>
+
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <img src="~/Uploads/@item.Photo" style="height:150px;" />
+                                            </td>
+                                            <td class="d-flex justify-content-end align-items-center" style="height:150px;">
+                                                <a style="width: 100px; height:30px" onclick="return confirm('Silmək istədiyinizə əminsiniz?')" href="@Url.Action("delete",new { id = item.Id })" class="btn btn-sm btn-danger">Sil</a>
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
